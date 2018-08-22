@@ -17,7 +17,7 @@ end
 
 def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_name
 "Write your SQL query Here"
-  "SELECT u.name, p.amount
+  "SELECT u.name, u.age, p.amount
   FROM users as u
   INNER JOIN pledges as p
   ON u.id = p.user_id
