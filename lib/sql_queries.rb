@@ -26,7 +26,7 @@ end
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
 "Write your SQL query Here"
-  "SELECT p.title, SUM(pl.amount) - p.funding_goal as diff
+  "SELECT p.title, SUM(pl.amount) - p.funding_goal
   FROM projects as p
   INNER JOIN pledges as pl ON p.id = pl.project_id
   GROUP BY pl.project_id"
