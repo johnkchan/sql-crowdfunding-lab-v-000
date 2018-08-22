@@ -29,7 +29,8 @@ def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_
   "SELECT p.title, SUM(pl.amount) - p.funding_goal
   FROM projects as p
   INNER JOIN pledges as pl ON p.id = pl.project_id
-  GROUP BY p.id"
+  GROUP BY p.id
+  WHERE SUM(pl.amount) - p.funding_goal > 0"
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
